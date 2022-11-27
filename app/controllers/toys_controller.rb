@@ -13,6 +13,7 @@ class ToysController < ApplicationController
 
   def update
     toy = Toy.find_by(id: params[:id])
+    toy = Toy.create(toy_params)
     toy.update(toy_params)
   end
 
